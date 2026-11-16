@@ -30,10 +30,14 @@ export const en = {
       description:
         "Turns payslips and card statements into one dashboard and a monthly email summary.",
       tags: ["Next.js", "Postgres", "Node", "Playwright", "Recharts"],
-      soon: "Case study coming soon",
+      demoUrl: "https://finanzas.martinarregui.dev",
+      codeUrl: "https://github.com/698Tincho/finanzas-demo",
+      cta: "Try the demo",
+      code: "View code",
+      note: "The demo is in Spanish and uses made-up data.",
       chartLabel: "Income · last 12 months",
       demo: "Demo data",
-      domain: "finanzas · demo",
+      domain: "finanzas.martinarregui.dev",
       kpis: [
         { label: "Income", value: 4820 },
         { label: "Spending", value: 3710 },

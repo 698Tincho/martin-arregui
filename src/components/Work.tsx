@@ -184,7 +184,7 @@ export default function Work({ t, lang }: { t: Dictionary; lang: Locale }) {
         </span>
       </div>
 
-      {/* Featured: Finanzas (demo data only) */}
+      {/* Featured: Finanzas, with links to the live demo (made-up data) and its code */}
       <article
         data-anim="pop"
         className="relative overflow-hidden rounded-[32px] bg-ink text-white"
@@ -207,10 +207,23 @@ export default function Work({ t, lang }: { t: Dictionary; lang: Locale }) {
               {fin.description}
             </p>
             <Tags items={fin.tags} tone="dark" />
-            <p className="mt-auto inline-flex items-center gap-2.5 pt-4 font-semibold">
-              <span aria-hidden className="size-2 rounded-full bg-sun" />
-              {fin.soon}
-            </p>
+            <div className="mt-auto flex flex-col gap-3 pt-4">
+              <div className="flex flex-wrap gap-3">
+                <VisitLink
+                  href={fin.demoUrl}
+                  label={fin.cta}
+                  newTab={t.work.opensInNewTab}
+                  className="inline-flex min-h-12 items-center gap-2 rounded-full bg-sun px-6 font-semibold text-ink transition-colors duration-300 hover:bg-white"
+                />
+                <VisitLink
+                  href={fin.codeUrl}
+                  label={fin.code}
+                  newTab={t.work.opensInNewTab}
+                  className="inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-white/25 px-6 font-semibold transition-colors duration-300 hover:border-white hover:bg-white hover:text-ink"
+                />
+              </div>
+              <p className="text-sm text-on-dark">{fin.note}</p>
+            </div>
           </div>
 
           <div className="flex flex-col overflow-hidden rounded-2xl bg-[#22222b] shadow-2xl shadow-black/40">

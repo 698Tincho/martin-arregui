@@ -32,10 +32,14 @@ export const es: Dictionary = {
       description:
         "Convierte recibos de sueldo y estados de cuenta de tarjetas en un solo dashboard y un resumen mensual por mail.",
       tags: ["Next.js", "Postgres", "Node", "Playwright", "Recharts"],
-      soon: "Caso de estudio: próximamente",
+      demoUrl: "https://finanzas.martinarregui.dev",
+      codeUrl: "https://github.com/698Tincho/finanzas-demo",
+      cta: "Probar la demo",
+      code: "Ver el código",
+      note: "La demo usa datos inventados.",
       chartLabel: "Ingresos · últimos 12 meses",
       demo: "Datos de ejemplo",
-      domain: "finanzas · demo",
+      domain: "finanzas.martinarregui.dev",
       kpis: [
         { label: "Ingresos", value: 4820 },
         { label: "Gastos", value: 3710 },
