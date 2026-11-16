@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { hasLocale, locales } from "@/i18n";
 import { getDictionary } from "@/dictionaries";
-import { cvPdfPath } from "@/dictionaries/cv";
 
 // Holding page shown on the live domain until launch (see src/launch.ts and src/proxy.ts).
 export default async function Soon({ params }: PageProps<"/[lang]/soon">) {
@@ -9,7 +8,6 @@ export default async function Soon({ params }: PageProps<"/[lang]/soon">) {
   if (!hasLocale(lang)) notFound();
   const t = getDictionary(lang);
   const h = t.hero;
-  const finanzas = t.work.finanzas;
 
   const pill =
     "inline-flex min-h-12 items-center gap-2 rounded-full border-2 border-ink/15 px-5 font-semibold transition-colors duration-300 hover:border-ink hover:bg-ink hover:text-white";
@@ -51,7 +49,6 @@ export default async function Soon({ params }: PageProps<"/[lang]/soon">) {
               {h.line2After}
             </span>
           </h1>
-          <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-primary-tint">{t.soon.intro}</p>
         </div>
 
         <nav aria-label={t.nav.contact} className="mt-6 flex flex-wrap gap-3">
@@ -66,12 +63,6 @@ export default async function Soon({ params }: PageProps<"/[lang]/soon">) {
           </a>
           <a href={t.contact.github} target="_blank" rel="noopener noreferrer" className={pill}>
             GitHub <span aria-hidden>↗</span>
-          </a>
-          <a href={cvPdfPath(lang)} download className={pill}>
-            {t.soon.cv} <span aria-hidden>↓</span>
-          </a>
-          <a href={finanzas.demoUrl} target="_blank" rel="noopener noreferrer" className={pill}>
-            {t.soon.demo} <span aria-hidden>↗</span>
           </a>
         </nav>
       </main>

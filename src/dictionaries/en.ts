@@ -79,11 +79,8 @@ export const en = {
   },
   marquee: ["Design", "Frontend", "Backend", "Branding", "Next.js", "Automation"],
   soon: {
-    badge: "New site in progress",
-    intro: "I'm Martín Arregui, a fullstack developer with a graphic design background, based in Montevideo. The full site is on its way. In the meantime, here's where to find me.",
+    badge: "Work in progress",
     email: "Email me",
-    cv: "Download CV",
-    demo: "Finanzas demo",
   },
   contact: {
     kicker: "Working on something, or just want to say hi?",

@@ -81,11 +81,8 @@ export const es: Dictionary = {
   },
   marquee: ["Diseño", "Frontend", "Backend", "Branding", "Next.js", "Automatización"],
   soon: {
-    badge: "Sitio nuevo en construcción",
-    intro: "Soy Martín Arregui, desarrollador fullstack con formación en diseño gráfico, en Montevideo. El sitio completo está en camino. Mientras tanto, me encontrás acá.",
+    badge: "En construcción",
     email: "Escribime",
-    cv: "Descargar CV",
-    demo: "Demo de Finanzas",
   },
   contact: {
     kicker: "¿Estás con un proyecto o querés charlar?",
