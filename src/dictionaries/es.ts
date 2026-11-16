@@ -80,6 +80,13 @@ export const es: Dictionary = {
     skills: ["Diseño UI", "Branding", "React y Next.js", "TypeScript", "Node", "Postgres", "Automatización", "Vercel"],
   },
   marquee: ["Diseño", "Frontend", "Backend", "Branding", "Next.js", "Automatización"],
+  soon: {
+    badge: "Sitio nuevo en construcción",
+    intro: "Soy Martín Arregui, desarrollador fullstack con formación en diseño gráfico, en Montevideo. El sitio completo está en camino. Mientras tanto, me encontrás acá.",
+    email: "Escribime",
+    cv: "Descargar CV",
+    demo: "Demo de Finanzas",
+  },
   contact: {
     kicker: "¿Estás con un proyecto o querés charlar?",
     cta: "Hablemos",

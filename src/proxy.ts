@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, hasLocale } from "@/i18n";
+import { comingSoon } from "@/launch";
 
 // Picks the visitor's language from the Accept-Language header ("es-UY,es;q=0.9,en;q=0.8").
 function preferredLocale(request: NextRequest) {
@@ -17,7 +18,14 @@ function preferredLocale(request: NextRequest) {
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const first = pathname.split("/")[1] ?? "";
-  if (hasLocale(first)) return;
+  if (hasLocale(first)) {
+    // Until launch, every page on the live domain shows the holding page (same URL)
+    if (comingSoon && pathname !== `/${first}/soon`) {
+      request.nextUrl.pathname = `/${first}/soon`;
+      return NextResponse.rewrite(request.nextUrl);
+    }
+    return;
+  }
 
   request.nextUrl.pathname = `/${preferredLocale(request)}${pathname}`;
   return NextResponse.redirect(request.nextUrl);
